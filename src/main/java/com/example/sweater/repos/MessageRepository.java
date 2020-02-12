@@ -3,6 +3,8 @@ package com.example.sweater.repos;
 import com.example.sweater.domain.Message;
 import org.springframework.data.repository.CrudRepository;
 
-public interface MessageRepository extends CrudRepository<Message, Integer> {
+import java.util.List;
 
+public interface MessageRepository extends CrudRepository<Message, Integer> {
+    List<Message> findByTag(String tag);
 }
